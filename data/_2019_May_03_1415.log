@@ -1,0 +1,54 @@
+3.6057 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([-0.3, -0.3, -0.3]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x13B29F50>, multiSample=False, name='window1', numSamples=2, pos=[340, 25], screen=1, size=array([1000, 1000]), stereo=False, units='pix', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType=u'pyglet')
+3.6077 	WARNING 	Requested an unavailable screen number - using first available.
+4.3293 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([-0.3, -0.3, -0.3]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x13F54EB0>, multiSample=False, name='window1', numSamples=2, pos=[460, 40], screen=2, size=array([1000, 1000]), stereo=False, units='pix', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType=u'pyglet')
+4.3293 	EXP 	window1: recordFrameIntervals = False
+4.4951 	EXP 	window1: recordFrameIntervals = True
+4.6787 	EXP 	window1: recordFrameIntervals = False
+5.4254 	EXP 	Created baseline_instructions = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='baseline_instructions', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([-0.5, -0.5, -0.5]), text=newstr(...), units='pix', win=Window(...), wrapWidth=500)
+5.4353 	EXP 	Created baseline_instructions2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='baseline_instructions2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='test 1', units='pix', win=Window(...), wrapWidth=500)
+5.4446 	EXP 	Created baseline_instructions3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='baseline_instructions3', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='test 2', units='pix', win=Window(...), wrapWidth=500)
+5.4458 	EXP 	Created zeitpuffer1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='zeitpuffer1', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([-0.5, -0.5, -0.5]), text='', units='pix', win=Window(...), wrapWidth=500)
+5.4470 	EXP 	Created text_6 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='text_6', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([-0.5, -0.5, -0.5]), text='', units='pix', win=Window(...), wrapWidth=500)
+5.4602 	EXP 	Created text_12 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='text_12', opacity=1.0, ori=0, pos=array([-10.,   0.]), rgb=array([-0.5, -0.5, -0.5]), text='default text', units='pix', win=Window(...), wrapWidth=500)
+5.5134 	EXP 	Created text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='text', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([-0.5, -0.5, -0.5]), text=newstr(...), units='pix', win=Window(...), wrapWidth=500)
+5.5147 	EXP 	Created zeitpuffer1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='zeitpuffer1', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([-0.5, -0.5, -0.5]), text='', units='pix', win=Window(...), wrapWidth=500)
+5.5160 	EXP 	Created text_13 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='text_13', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([-0.5, -0.5, -0.5]), text='', units='pix', win=Window(...), wrapWidth=500)
+5.5292 	EXP 	Created text_12 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='text_12', opacity=1.0, ori=0, pos=array([-10.,   0.]), rgb=array([-0.5, -0.5, -0.5]), text='default text', units='pix', win=Window(...), wrapWidth=500)
+5.5898 	EXP 	Created text_14 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='text_14', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([-0.5, -0.5, -0.5]), text=newstr(...), units='pix', win=Window(...), wrapWidth=500)
+5.5910 	EXP 	Created zeitpuffer1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='zeitpuffer1', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([-0.5, -0.5, -0.5]), text='', units='pix', win=Window(...), wrapWidth=500)
+5.5923 	EXP 	Created text_11 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='text_11', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([-0.5, -0.5, -0.5]), text='', units='pix', win=Window(...), wrapWidth=500)
+5.6048 	EXP 	Created text_12 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, name='text_12', opacity=1.0, ori=0, pos=array([-10.,   0.]), rgb=array([-0.5, -0.5, -0.5]), text='default text', units='pix', win=Window(...), wrapWidth=500)
+5.6484 	EXP 	Created text_end = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=40, italic=False, name='text_end', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=newstr(...), units='pix', win=Window(...), wrapWidth=500)
+5.7043 	EXP 	baseline_instructions2: autoDraw = True
+10.4213 	DATA 	Keypress: space
+10.4377 	EXP 	baseline_instructions2: autoDraw = False
+10.4377 	EXP 	baseline_instructions3: autoDraw = True
+16.1399 	DATA 	Mouse: Left button down, pos=(591,780)
+16.2713 	DATA 	Mouse:  Left button up, pos=(591,780)
+17.3382 	DATA 	Keypress: space
+18.9880 	DATA 	Mouse: Left button down, pos=(582,959)
+19.0882 	DATA 	Mouse:  Left button up, pos=(582,959)
+19.1549 	DATA 	Keypress: space
+21.0046 	DATA 	Mouse:  Left button up, pos=(586,1000)
+21.6714 	DATA 	Mouse: Left button down, pos=(573,939)
+21.7880 	DATA 	Mouse:  Left button up, pos=(573,939)
+21.8713 	DATA 	Keypress: space
+22.1548 	DATA 	Keypress: space
+22.4047 	DATA 	Keypress: space
+23.3048 	DATA 	Mouse: Left button down, pos=(573,939)
+23.4047 	DATA 	Mouse:  Left button up, pos=(573,939)
+23.4547 	DATA 	Keypress: space
+23.6883 	DATA 	Mouse: Right button down, pos=(524,776)
+23.7547 	DATA 	Mouse:  Right button up, pos=(525,759)
+24.0882 	DATA 	Mouse: Left button down, pos=(389,642)
+24.1880 	DATA 	Mouse:  Left button up, pos=(387,643)
+24.2714 	DATA 	Mouse: Right button down, pos=(387,643)
+24.3214 	DATA 	Mouse:  Right button up, pos=(387,643)
+25.5380 	DATA 	Mouse: Left button down, pos=(731,619)
+25.6549 	DATA 	Mouse:  Left button up, pos=(731,619)
+25.7047 	DATA 	Keypress: space
+25.9047 	DATA 	Keypress: space
+26.1214 	DATA 	Keypress: space
+26.8047 	DATA 	Keypress: escape
+26.8439 	EXP 	window1: mouseVisible = True
+26.8715 	EXP 	window1: mouseVisible = True

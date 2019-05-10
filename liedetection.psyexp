@@ -1,0 +1,944 @@
+<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="1.90.1">
+  <Settings>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="color" updates="None" val="$[-0.3,-0.3,-0.3]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="Experiment info" updates="None" val="{u'session': u'001', u'participant': u''}" valType="code"/>
+    <Param name="JS libs" updates="None" val="packaged" valType="str"/>
+    <Param name="Units" updates="None" val="pix" valType="str"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Save csv file" updates="None" val="True" valType="bool"/>
+    <Param name="OSF Project ID" updates="None" val="" valType="str"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Data filename" updates="None" val="u'data' + os.path.sep + '%s_%s' %(expInfo['participant'], expInfo['date'])" valType="code"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="expName" updates="None" val="BCI_Exp_v10" valType="str"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+    <Param name="Screen" updates="None" val="2" valType="num"/>
+  </Settings>
+  <Routines>
+    <Routine name="feedback">
+      <KeyboardComponent name="key_resp_6">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_6" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="text_12">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_12" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="set every repeat" val="$feedbacktext" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(-10, 0)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="baseline">
+      <TextComponent name="zeitpuffer1">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="zeitpuffer1" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+      <CodeComponent name="baseline_code">
+        <Param name="Begin Experiment" updates="constant" val="#baseline_liste=[]&amp;#10;#import numpy&amp;#10;&amp;#10;#-----------------------------------&amp;#10;# Begin Experiment&amp;#10;#-----------------------------------&amp;#10;import numpy&amp;#10;&amp;#10;bsize_liste = [0]*1900 # ca. 900 bei 30Hz | ca. 1900 bei 60Hz&amp;#10;bsize = 0&amp;#10;" valType="extendedCode"/>
+        <Param name="name" updates="None" val="baseline_code" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="bsize_liste = [0]*1900 # ca. 900 bei 30Hz | ca. 1900 bei 60Hz&amp;#10;&amp;#10;&amp;#10;#-----------------------------------&amp;#10;# Begin Routine&amp;#10;#-----------------------------------&amp;#10;&amp;#10;#---------------------&amp;#10;# starting values&amp;#10;state_no = 0&amp;#10;&amp;#10;lmarker = -1 &amp;#10;&amp;#10;delay_size = 2&amp;#10;&amp;#10;#---------------------&amp;#10;# filter preferences&amp;#10;step_limit = 0.19    # 30Hz: 0.19 | 60Hz: 0.09&amp;#10;lower_th = 1" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="#-----------------------------------&amp;#10;# End Routine&amp;#10;#-----------------------------------  &amp;#10;&amp;#10;#logging.console.write(&quot;test\n&quot;)&amp;#10;# computing baseline mean&amp;#10;bsize_liste = filter(None, bsize_liste)&amp;#10;baselinemean = round((sum(bsize_liste)/(len(bsize_liste))),2)&amp;#10;baselinemean = baselinemean&amp;#10;&amp;#10;&amp;#10;# computing baseline sd&amp;#10;baselinesd = abs(round(numpy.std(bsize_liste),8))&amp;#10;&amp;#10;# computing percent-change: sd / mean&amp;#10;prozent_change1= round((baselinesd/baselinemean),2)&amp;#10;&amp;#10;# computing aussenringradius - maximum deviation &amp;#10;aussenringradius = (baselinemean+(baselinemean*prozent_change1))*35&amp;#10;&amp;#10;# computing innenringradius - minimum deviation&amp;#10;innenringradius = (baselinemean-(baselinemean*prozent_change1))*35&amp;#10;&amp;#10;#--------------------------------------------------------------------------&amp;#10;# savings:&amp;#10;&amp;#10;thisExp.addData('Baseline_Liste', bsize_liste)&amp;#10;thisExp.addData('Baseline_Mittelwert', baselinemean)&amp;#10;thisExp.addData('Baseline_Standardabweichung', baselinesd)&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="res = iViewXAPI.iV_GetSample(byref(sampleData))&amp;#10;bsize =(sampleData.leftEye.diam) # /32 für highspeed eyetracker, ohne /32 für RED&amp;#10;&amp;#10;&amp;#10;#logging.console.write(str(bsize))&amp;#10;&amp;#10;#--------------------&amp;#10;# state 0: starting&amp;#10;#--------------------&amp;#10;if state_no == 0:&amp;#10; if lmarker &lt; 1:&amp;#10;  lmarker = lmarker + 1&amp;#10;  bsize_liste[lmarker] = bsize&amp;#10;  state_next = 0&amp;#10; &amp;#10; else:  &amp;#10;  if bsize &gt; lower_th and bsize_liste[lmarker] &gt; lower_th and bsize_liste[lmarker-1] &gt; lower_th and (abs(bsize-bsize_liste[lmarker]) &lt;= step_limit) and (abs(bsize_liste[lmarker]-bsize_liste[lmarker-1]) &lt;= step_limit):&amp;#10;   lmarker = lmarker + 1&amp;#10;   bsize_liste[lmarker] = bsize&amp;#10;   state_next = 1&amp;#10;  else:&amp;#10;   bsize_liste[lmarker-1] = bsize_liste[lmarker]&amp;#10;   bsize_liste[lmarker] = bsize&amp;#10;&amp;#10;   state_next = 0&amp;#10;&amp;#10;&amp;#10;#----------------------&amp;#10;# state 1: observation&amp;#10;#----------------------&amp;#10;&amp;#10;if state_no == 1:&amp;#10; &amp;#10; # Filter Activation&amp;#10; #- - - - - - - - - - -&amp;#10; if bsize &lt;= lower_th:&amp;#10;  on = 1&amp;#10;  jump_marker = lmarker + 1 # marks values to be replaced &amp;#10;  &amp;#10;        # Identification of last valid_value before the blink&amp;#10;        #- - - - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;  while on == 1:&amp;#10;   if bsize_liste[lmarker] &gt;= lower_th and bsize_liste[lmarker-1] &gt;= lower_th and bsize_liste[lmarker-2] &gt;= lower_th and abs(bsize_liste[lmarker]-bsize_liste[lmarker-1]) &lt;= step_limit and abs(bsize_liste[lmarker-1]-bsize_liste[lmarker-2]) &lt;= step_limit:&amp;#10;    valid_value = bsize_liste[lmarker]&amp;#10;    lmarker = lmarker + 1&amp;#10;    for i in range(lmarker, jump_marker, 1):&amp;#10;     bsize_liste[i] = valid_value&amp;#10;&amp;#10;    bsize_liste[jump_marker] = valid_value&amp;#10;&amp;#10;    lmarker = jump_marker&amp;#10;    puffer_size = jump_marker + delay_size&amp;#10;&amp;#10;    on = 0&amp;#10;    state_next = 2&amp;#10;&amp;#10;   else:&amp;#10;    lmarker = lmarker-1&amp;#10;    &amp;#10; else:&amp;#10;  lmarker = lmarker + 1&amp;#10;  bsize_liste[lmarker] = bsize&amp;#10;  &amp;#10;  state_next = 1&amp;#10;&amp;#10;&amp;#10;#-------------------------------------------------------------&amp;#10;# state 2: identification of next valid_value after the blink&amp;#10;#-------------------------------------------------------------&amp;#10;&amp;#10;if state_no == 2:&amp;#10; # collecting values following the blink&amp;#10; #- - - - - - - - - - - - - - - - - - - - - -&amp;#10; if lmarker &lt; puffer_size:&amp;#10;  lmarker = lmarker + 1&amp;#10;  bsize_liste[lmarker] = bsize&amp;#10;&amp;#10;  state_next = 2&amp;#10;&amp;#10; else:&amp;#10;# identification of next valid_value after the blink&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - - - &amp;#10;  if bsize &gt; lower_th and abs(bsize-bsize_liste[lmarker]) &lt;= step_limit and abs(bsize_liste[lmarker]-bsize_liste[lmarker-1]) &lt;= step_limit:               &amp;#10;   lmarker = lmarker + 1&amp;#10;   bsize_liste[lmarker] = bsize&amp;#10;   &amp;#10;   state_next = 1&amp;#10;&amp;#10;  else:&amp;#10;   lmarker = lmarker + 1&amp;#10;   bsize_liste[lmarker] = bsize&amp;#10;   bsize_liste[lmarker-2] = valid_value&amp;#10;   &amp;#10;   state_next = 2&amp;#10;&amp;#10;state_no = state_next&amp;#10;&amp;#10;#baseline_liste.append(sampleData.leftEye.diam/32)&amp;#10;line1 = visual.Line(win, start=(0, -20), end=(0, 20), lineColor=(-1, -1, -1))&amp;#10;line2 = visual.Line(win, start=(-20, 0), end=(20, 0), lineColor=(-1, -1, -1))&amp;#10;line1.draw()&amp;#10;line2.draw()&amp;#10;" valType="extendedCode"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="trial_erg">
+      <CodeComponent name="code_7">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_7" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="timer3=core.CountdownTimer() &amp;#10;timer3.add(5)" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="vartext6 = '= ?'&amp;#10;if timer3.getTime()&lt;0 :&amp;#10;    vartext6 = akt_zahl" valType="extendedCode"/>
+      </CodeComponent>
+      <TextComponent name="text_7">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_7" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="set every frame" val="$vartext6" valType="str"/>
+        <Param name="stopVal" updates="constant" val="10" valType="code"/>
+        <Param name="durationEstim" updates="None" val="10" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="tr_instructions">
+      <TextComponent name="text_2">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_2" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="Baselineregistrierung beendet.&amp;#10;&amp;#10;Messung startet in wenigen Sekunden." valType="str"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="arousal">
+      <RatingScaleComponent name="rating">
+        <Param name="labels" updates="constant" val="" valType="str"/>
+        <Param name="pos" updates="constant" val="0, -0.4" valType="str"/>
+        <Param name="high" updates="constant" val="9" valType="code"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="marker" updates="constant" val="triangle" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="markerStart" updates="constant" val="" valType="str"/>
+        <Param name="disappear" updates="constant" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="1.0" valType="code"/>
+        <Param name="tickHeight" updates="constant" val="" valType="str"/>
+        <Param name="showAccept" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="low" updates="constant" val="1" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="visualAnalogScale" updates="constant" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="scaleDescription" updates="constant" val="" valType="str"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="categoryChoices" updates="constant" val="" valType="str"/>
+        <Param name="customize_everything" updates="constant" val="showAccept=False,escapeKeys=['escape'], size=1.62, &amp;#10;    pos=[0.0, -0.1], low=1, high=9, scale=' ', markerColor= [-0.5, -0.5, -0.5], textColor=[-0.5, -0.5, -0.5], lineColor=[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="name" updates="None" val="rating" valType="code"/>
+        <Param name="singleClick" updates="constant" val="False" valType="bool"/>
+      </RatingScaleComponent>
+      <ImageComponent name="image_3">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="constant" val="image_3" valType="code"/>
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="pos" updates="constant" val="[0, 150]" valType="code"/>
+        <Param name="interpolate" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="arousal.png" valType="str"/>
+        <Param name="size" updates="constant" val="[910, 115]" valType="code"/>
+      </ImageComponent>
+    </Routine>
+    <Routine name="training_feedback">
+      <TextComponent name="text_13">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_13" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="stopVal" updates="constant" val="10" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+      <CodeComponent name="b_trial_code_2_">
+        <Param name="Begin Experiment" updates="constant" val="from numpy import (log)&amp;#10;maxsize=0&amp;#10;minsize=3000&amp;#10;psizeliste = [0]*19000 # ca. 900 bei 30Hz | ca. 1900 bei 60Hz&amp;#10;psize = 0&amp;#10;&amp;#10;feedbacktext = &quot;&quot;&amp;#10;" valType="extendedCode"/>
+        <Param name="name" updates="None" val="b_trial_code_2_" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="&amp;#10;psizeliste = [0]*190000 # ca. 900 bei 30Hz | ca. 1900 bei 60Hz&amp;#10;psize = 0&amp;#10;&amp;#10;&amp;#10;#---------------------&amp;#10;# starting values&amp;#10;state_no = 0&amp;#10;&amp;#10;lmarker = -1 &amp;#10;&amp;#10;delay_size = 2&amp;#10;&amp;#10;#---------------------&amp;#10;# filter preferences&amp;#10;step_limit = 0.19    # 30Hz: 0.19 | 60Hz: 0.09&amp;#10;lower_th = 1&amp;#10;&amp;#10;#---------------------&amp;#10;# plot settings&amp;#10;minsize = 3000&amp;#10;maxsize = 0&amp;#10;plot_marker = 0&amp;#10;mean_length = 3&amp;#10;plot_buffer = 5&amp;#10;&amp;#10;abc = 0&amp;#10;&amp;#10;#draw&amp;#10;line1 = visual.Line(win, start=(0, -20), end=(0, 20), lineColor=(-1, -1, -1))&amp;#10;line2 = visual.Line(win, start=(-20, 0), end=(20, 0), lineColor=(-1, -1, -1))&amp;#10;circle2 = visual.Circle(win, edges=96, radius=aussenringradius,lineWidth=1, lineColor=(0 , 0, 0), fillColor=(0 , 0, 0), interpolate=True)&amp;#10;circle3 = visual.Circle(win, edges=96, radius=innenringradius,lineWidth=1, lineColor=(-0.3 , -0.3, -0.3), fillColor=(-0.3 , -0.3, -0.3), interpolate=True)&amp;#10;circle4 = visual.Circle(win, edges=96, radius=baselinemean*35,lineWidth=2, lineColor=(-1 , -1, -1), interpolate=True)&amp;#10;circle5 = visual.Circle(win, edges=96, radius=1000,lineWidth=1, lineColor=(-1 , -1, -1), interpolate=True)&amp;#10;circle6 = visual.Circle(win, edges=96, radius=1000,lineWidth=1, lineColor=(-1 , -1, -1), interpolate=True)&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="psizeliste = filter(None, psizeliste)&amp;#10;&amp;#10;psizemean = round((sum(psizeliste)/(len(psizeliste))),2)&amp;#10;&amp;#10;thisExp.addData('Pupil_Liste', psizeliste)&amp;#10;thisExp.addData('Pupil_Mean', psizemean)&amp;#10;&amp;#10;&amp;#10;feedbacktext = &quot;Your baseline was: &quot; + str(baselinemean)+ &quot;\n&quot; + &quot;Your average pupildilation was: &quot; + str(psizemean)+ &quot;\n&quot; &amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="res = iViewXAPI.iV_Disconnect()" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="&amp;#10;#-----------------------------------&amp;#10;# Each Frame&amp;#10;#-----------------------------------&amp;#10;# eye-tracker data&amp;#10;res = iViewXAPI.iV_GetSample(byref(sampleData))&amp;#10;psize =(sampleData.leftEye.diam) # /32 für highspeed eyetracker, ohne /32 für RED&amp;#10;&amp;#10;&amp;#10;#--------------------&amp;#10;# state 0: starting&amp;#10;#--------------------&amp;#10;if state_no == 0:&amp;#10; if lmarker &lt; 1:&amp;#10;  lmarker = lmarker + 1&amp;#10;  psizeliste[lmarker] = psize&amp;#10;  state_next = 0&amp;#10; &amp;#10; else:&amp;#10;  if psize &gt; lower_th and psizeliste[lmarker] &gt; lower_th and psizeliste[lmarker-1] &gt; lower_th and (abs(psize-psizeliste[lmarker]) &lt;= step_limit) and (abs(psizeliste[lmarker]-psizeliste[lmarker-1]) &lt;= step_limit):&amp;#10;   lmarker = lmarker + 1&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   state_next = 1&amp;#10;  else:&amp;#10;   psizeliste[lmarker-1] = psizeliste[lmarker]&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   state_next = 0&amp;#10;&amp;#10;&amp;#10;#----------------------&amp;#10;# state 1: observation&amp;#10;#----------------------&amp;#10;&amp;#10;if state_no == 1:&amp;#10; plot_marker = 1 &amp;#10; # Filter Activation&amp;#10; #- - - - - - - - - - -&amp;#10; if psize &lt;= lower_th:&amp;#10;  on = 1&amp;#10;  jump_marker = lmarker + 1 # marks values to be replaced &amp;#10;  # Identification of last valid_value before the blink&amp;#10;  #- - - - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;  while on == 1:&amp;#10;   if psizeliste[lmarker] &gt;= lower_th and psizeliste[lmarker-1] &gt;= lower_th and psizeliste[lmarker-2] &gt;= lower_th and abs(psizeliste[lmarker]-psizeliste[lmarker-1]) &lt;= step_limit and abs(psizeliste[lmarker-1]-psizeliste[lmarker-2]) &lt;= step_limit:&amp;#10;    valid_value = psizeliste[lmarker]&amp;#10;    lmarker = lmarker + 1&amp;#10;    # replacing values&amp;#10;    for i in range(lmarker, jump_marker, 1):&amp;#10;     psizeliste[i] = valid_value&amp;#10;    psizeliste[jump_marker] = valid_value&amp;#10;    lmarker = jump_marker&amp;#10;    puffer_size = jump_marker + delay_size&amp;#10;    on = 0&amp;#10;    state_next = 2&amp;#10;   else:&amp;#10;    lmarker = lmarker-1&amp;#10; else:&amp;#10;  lmarker = lmarker + 1&amp;#10;  psizeliste[lmarker] = psize&amp;#10;  state_next = 1&amp;#10;#-------------------------------------------------------------&amp;#10;# state 2: identification of next valid_value after the blink&amp;#10;#-------------------------------------------------------------&amp;#10;if state_no == 2:&amp;#10; plot_marker = 1&amp;#10; # collecting values following the blink&amp;#10; #- - - - - - - - - - - - - - - - - - - - - -&amp;#10; if lmarker &lt; puffer_size:&amp;#10;  lmarker = lmarker + 1&amp;#10;  psizeliste[lmarker] = psize&amp;#10;  state_next = 2&amp;#10;&amp;#10; else:&amp;#10; # identification of next valid_value after the blink&amp;#10; #- - - - - - - - - - - - - - - - - - - - - - - - - - - - &amp;#10;  if psize &gt; lower_th and abs(psize-psizeliste[lmarker]) &lt;= step_limit and abs(psizeliste[lmarker]-psizeliste[lmarker-1]) &lt;= step_limit:               &amp;#10;   lmarker = lmarker + 1&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   state_next = 1&amp;#10;  else:&amp;#10;   lmarker = lmarker + 1&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   psizeliste[lmarker-2] = valid_value&amp;#10;   state_next = 2&amp;#10;&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;# smooth &amp; plot data:&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;if state_no == 0 or state_no == 1 or state_no == 2:&amp;#10; if plot_marker == 1:&amp;#10;        # BASELINE RINGE (schwarz): MW +/-SD&amp;#10;        #- - - - - - - - - - - - - - - - - - - -&amp;#10;        #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -     &amp;#10;        # FEEDBACK RINGE (rot | grau): Pupillengröße u. Extrema&amp;#10;        #- - - - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;  if lmarker &gt;= mean_length + plot_buffer:&amp;#10;   current_mean = 0&amp;#10;   for p in range(1, mean_length+1, 1):&amp;#10;    current_mean = psizeliste[lmarker-p-plot_buffer] + current_mean&amp;#10;   current_mean = (current_mean/mean_length)*35&amp;#10;&amp;#10;  if current_mean &gt; maxsize and current_mean &gt; aussenringradius:&amp;#10;   maxsize = current_mean&amp;#10;   circle5 = visual.Circle(win, edges=96, radius=maxsize,lineWidth=1, lineColor=(0.2 , 0.2, 0.2), interpolate=True)&amp;#10;  elif current_mean &lt; minsize and current_mean &lt; innenringradius and current_mean != 0:&amp;#10;   minsize = current_mean&amp;#10;   circle6 = visual.Circle(win, edges=96, radius=minsize,lineWidth=1, lineColor=(0.2 , 0.2, 0.2), interpolate=True)&amp;#10;&amp;#10;#red circle&amp;#10;circle1 = visual.Circle(win, edges=96, radius=current_mean,lineWidth=4, lineColor=(0,-1,-1), interpolate=True)&amp;#10;&amp;#10;abc = abc+0.03&amp;#10;&amp;#10;circle2.draw()&amp;#10;circle3.draw()&amp;#10;#circle4.draw()&amp;#10;circle1.draw()&amp;#10;line1.draw()&amp;#10;line2.draw()&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - &amp;#10;&amp;#10;state_no = state_next&amp;#10;" valType="extendedCode"/>
+      </CodeComponent>
+      <KeyboardComponent name="key_resp_11">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_11" valType="code"/>
+        <Param name="stopVal" updates="constant" val="10" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="meldung">
+      <TextComponent name="text_10">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_10" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="Danke. &amp;#10;&amp;#10;Fixiere weiterhin das Kreuz und imaginiere eine schöne Situation." valType="str"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="pause">
+      <TextComponent name="Puffer">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="Puffer" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="Messung beendet.&amp;#10;&amp;#10;Weiter mit Leertaste.&amp;#10;" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_5">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_5" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <CodeComponent name="code_11">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_11" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="feedbacktext=&quot;&quot;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="end">
+      <TextComponent name="text_end">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_end" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="The training has finished!&amp;#10;&amp;#10;(press 'space')" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="40" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_3">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_3" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="0.0" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="bl_instructions">
+      <TextComponent name="baseline_instructions">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="baseline_instructions" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="After the baseline was taken you will have 5 Minutes &amp;#10;to explore different strategies to increase or decrease your pupil size. &amp;#10;&amp;#10;(to start press &lt;space&gt;)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+      <CodeComponent name="code_10">
+        <Param name="Begin Experiment" updates="constant" val="import random&amp;#10;nend=0&amp;#10;clbsloop=0&amp;#10;current_mean = 0" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_10" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+      <KeyboardComponent name="key_resp_4">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_4" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="SAM">
+      <TextComponent name="text_8">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_8" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="Bitte bewerte im Folgenden dein aktuelles Empfinden. &amp;#10; &amp;#10;Zum Starten Leertaste drücken." valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_8">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_8" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="instructions_noFeedback">
+      <CodeComponent name="b_iViewX_2_">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="b_iViewX_2_" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="res = iViewXAPI.iV_Disconnect()" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+      <TextComponent name="text_14">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_14" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="Start activating when the color of the cross changes to light gray&amp;#10;&amp;#10;(press 'space')" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_12">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_12" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="training_noFeedback">
+      <TextComponent name="text_11">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_11" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="stopVal" updates="constant" val="10" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+      <CodeComponent name="b_b_trial_code_2__2_">
+        <Param name="Begin Experiment" updates="constant" val="from numpy import (log)&amp;#10;maxsize=0&amp;#10;minsize=3000&amp;#10;psizeliste = [0]*19000 # ca. 900 bei 30Hz | ca. 1900 bei 60Hz&amp;#10;psize = 0&amp;#10;" valType="extendedCode"/>
+        <Param name="name" updates="None" val="b_b_trial_code_2__2_" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="&amp;#10;psizeliste = [0]*190000 # ca. 900 bei 30Hz | ca. 1900 bei 60Hz&amp;#10;psize = 0&amp;#10;&amp;#10;&amp;#10;#---------------------&amp;#10;# starting values&amp;#10;state_no = 0&amp;#10;&amp;#10;lmarker = -1 &amp;#10;&amp;#10;delay_size = 2&amp;#10;&amp;#10;#---------------------&amp;#10;# filter preferences&amp;#10;step_limit = 0.19    # 30Hz: 0.19 | 60Hz: 0.09&amp;#10;lower_th = 1&amp;#10;&amp;#10;#---------------------&amp;#10;# plot settings&amp;#10;minsize = 3000&amp;#10;maxsize = 0&amp;#10;plot_marker = 0&amp;#10;mean_length = 3&amp;#10;plot_buffer = 5&amp;#10;&amp;#10;abc = 0&amp;#10;&amp;#10;#draw&amp;#10;line1 = visual.Line(win, start=(0, -20), end=(0, 20), lineColor=(-1, -1, -1))&amp;#10;line2 = visual.Line(win, start=(-20, 0), end=(20, 0), lineColor=(-1, -1, -1))&amp;#10;circle2 = visual.Circle(win, edges=96, radius=aussenringradius,lineWidth=1, lineColor=(0 , 0, 0), fillColor=(0 , 0, 0), interpolate=True)&amp;#10;circle3 = visual.Circle(win, edges=96, radius=innenringradius,lineWidth=1, lineColor=(-0.3 , -0.3, -0.3), fillColor=(-0.3 , -0.3, -0.3), interpolate=True)&amp;#10;circle4 = visual.Circle(win, edges=96, radius=baselinemean*35,lineWidth=2, lineColor=(-1 , -1, -1), interpolate=True)&amp;#10;circle5 = visual.Circle(win, edges=96, radius=1000,lineWidth=1, lineColor=(-1 , -1, -1), interpolate=True)&amp;#10;circle6 = visual.Circle(win, edges=96, radius=1000,lineWidth=1, lineColor=(-1 , -1, -1), interpolate=True)&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="psizeliste = filter(None, psizeliste)&amp;#10;&amp;#10;psizemean = round((sum(psizeliste)/(len(psizeliste))),2)&amp;#10;&amp;#10;thisExp.addData('Pupil_Liste', psizeliste)&amp;#10;thisExp.addData('Pupil_Mean', psizemean)&amp;#10;&amp;#10;&amp;#10;feedbacktext = &quot;Your baseline was: &quot; + str(baselinemean)+ &quot;\n&quot; + &quot;Your average pupildilation was: &quot; + str(psizemean)+ &quot;\n&quot; &amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="res = iViewXAPI.iV_Disconnect()" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="&amp;#10;#-----------------------------------&amp;#10;# Each Frame&amp;#10;#-----------------------------------&amp;#10;# eye-tracker data&amp;#10;res = iViewXAPI.iV_GetSample(byref(sampleData))&amp;#10;psize =(sampleData.leftEye.diam) # /32 für highspeed eyetracker, ohne /32 für RED&amp;#10;&amp;#10;&amp;#10;#--------------------&amp;#10;# state 0: starting&amp;#10;#--------------------&amp;#10;if state_no == 0:&amp;#10; if lmarker &lt; 1:&amp;#10;  lmarker = lmarker + 1&amp;#10;  psizeliste[lmarker] = psize&amp;#10;  state_next = 0&amp;#10; &amp;#10; else:&amp;#10;  if psize &gt; lower_th and psizeliste[lmarker] &gt; lower_th and psizeliste[lmarker-1] &gt; lower_th and (abs(psize-psizeliste[lmarker]) &lt;= step_limit) and (abs(psizeliste[lmarker]-psizeliste[lmarker-1]) &lt;= step_limit):&amp;#10;   lmarker = lmarker + 1&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   state_next = 1&amp;#10;  else:&amp;#10;   psizeliste[lmarker-1] = psizeliste[lmarker]&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   state_next = 0&amp;#10;&amp;#10;&amp;#10;#----------------------&amp;#10;# state 1: observation&amp;#10;#----------------------&amp;#10;&amp;#10;if state_no == 1:&amp;#10; plot_marker = 1 &amp;#10; # Filter Activation&amp;#10; #- - - - - - - - - - -&amp;#10; if psize &lt;= lower_th:&amp;#10;  on = 1&amp;#10;  jump_marker = lmarker + 1 # marks values to be replaced &amp;#10;  # Identification of last valid_value before the blink&amp;#10;  #- - - - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;  while on == 1:&amp;#10;   if psizeliste[lmarker] &gt;= lower_th and psizeliste[lmarker-1] &gt;= lower_th and psizeliste[lmarker-2] &gt;= lower_th and abs(psizeliste[lmarker]-psizeliste[lmarker-1]) &lt;= step_limit and abs(psizeliste[lmarker-1]-psizeliste[lmarker-2]) &lt;= step_limit:&amp;#10;    valid_value = psizeliste[lmarker]&amp;#10;    lmarker = lmarker + 1&amp;#10;    # replacing values&amp;#10;    for i in range(lmarker, jump_marker, 1):&amp;#10;     psizeliste[i] = valid_value&amp;#10;    psizeliste[jump_marker] = valid_value&amp;#10;    lmarker = jump_marker&amp;#10;    puffer_size = jump_marker + delay_size&amp;#10;    on = 0&amp;#10;    state_next = 2&amp;#10;   else:&amp;#10;    lmarker = lmarker-1&amp;#10; else:&amp;#10;  lmarker = lmarker + 1&amp;#10;  psizeliste[lmarker] = psize&amp;#10;  state_next = 1&amp;#10;#-------------------------------------------------------------&amp;#10;# state 2: identification of next valid_value after the blink&amp;#10;#-------------------------------------------------------------&amp;#10;if state_no == 2:&amp;#10; plot_marker = 1&amp;#10; # collecting values following the blink&amp;#10; #- - - - - - - - - - - - - - - - - - - - - -&amp;#10; if lmarker &lt; puffer_size:&amp;#10;  lmarker = lmarker + 1&amp;#10;  psizeliste[lmarker] = psize&amp;#10;  state_next = 2&amp;#10;&amp;#10; else:&amp;#10; # identification of next valid_value after the blink&amp;#10; #- - - - - - - - - - - - - - - - - - - - - - - - - - - - &amp;#10;  if psize &gt; lower_th and abs(psize-psizeliste[lmarker]) &lt;= step_limit and abs(psizeliste[lmarker]-psizeliste[lmarker-1]) &lt;= step_limit:               &amp;#10;   lmarker = lmarker + 1&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   state_next = 1&amp;#10;  else:&amp;#10;   lmarker = lmarker + 1&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   psizeliste[lmarker-2] = valid_value&amp;#10;   state_next = 2&amp;#10;&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;# smooth &amp; plot data:&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;if state_no == 0 or state_no == 1 or state_no == 2:&amp;#10; if plot_marker == 1:&amp;#10;        # BASELINE RINGE (schwarz): MW +/-SD&amp;#10;        #- - - - - - - - - - - - - - - - - - - -&amp;#10;        #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -     &amp;#10;        # FEEDBACK RINGE (rot | grau): Pupillengröße u. Extrema&amp;#10;        #- - - - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;  if lmarker &gt;= mean_length + plot_buffer:&amp;#10;   current_mean = 0&amp;#10;   for p in range(1, mean_length+1, 1):&amp;#10;    current_mean = psizeliste[lmarker-p-plot_buffer] + current_mean&amp;#10;   current_mean = (current_mean/mean_length)*35&amp;#10;&amp;#10;  if current_mean &gt; maxsize and current_mean &gt; aussenringradius:&amp;#10;   maxsize = current_mean&amp;#10;   circle5 = visual.Circle(win, edges=96, radius=maxsize,lineWidth=1, lineColor=(0.2 , 0.2, 0.2), interpolate=True)&amp;#10;  elif current_mean &lt; minsize and current_mean &lt; innenringradius and current_mean != 0:&amp;#10;   minsize = current_mean&amp;#10;   circle6 = visual.Circle(win, edges=96, radius=minsize,lineWidth=1, lineColor=(0.2 , 0.2, 0.2), interpolate=True)&amp;#10;&amp;#10;#red circle&amp;#10;#circle1 = visual.Circle(win, edges=96, radius=current_mean,lineWidth=4, lineColor=(0,-1,-1), interpolate=True)&amp;#10;&amp;#10;#abc = abc+0.03&amp;#10;&amp;#10;#circle2.draw()&amp;#10;#circle3.draw()&amp;#10;#circle4.draw()&amp;#10;#circle1.draw()&amp;#10;#line1.draw()&amp;#10;#line2.draw()&amp;#10;&amp;#10;line1 = visual.Line(win, start=(0, -20), end=(0, 20), lineColor=(-0, -0, -0))&amp;#10;line2 = visual.Line(win, start=(-20, 0), end=(20, 0), lineColor=(-0, -0, -0))&amp;#10;line1.draw()&amp;#10;line2.draw()&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - &amp;#10;&amp;#10;state_no = state_next&amp;#10;" valType="extendedCode"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="test"/>
+    <Routine name="wait">
+      <CodeComponent name="code_12">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_12" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="#baseline_liste.append(sampleData.leftEye.diam/32)&amp;#10;line1 = visual.Line(win, start=(0, -20), end=(0, 20), lineColor=(-1, -1, -1))&amp;#10;line2 = visual.Line(win, start=(-20, 0), end=(20, 0), lineColor=(-1, -1, -1))&amp;#10;line1.draw()&amp;#10;line2.draw()&amp;#10;" valType="extendedCode"/>
+      </CodeComponent>
+      <KeyboardComponent name="key_resp_10">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_10" valType="code"/>
+        <Param name="stopVal" updates="constant" val="2" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="save_trial">
+      <CodeComponent name="code_2">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_2" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="thisExp.addData('Pupil_Liste', ssizeliste)" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="baselineCL">
+      <TextComponent name="zeitpuffer">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="zeitpuffer" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="stopVal" updates="constant" val="20" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+      </TextComponent>
+      <CodeComponent name="code_9">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_9" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="counter=counter+1&amp;#10;bsize_liste = [0]*1900 # ca. 900 bei 30Hz | ca. 1900 bei 60Hz&amp;#10;&amp;#10;#-----------------------------------&amp;#10;# Begin Routine&amp;#10;#-----------------------------------&amp;#10;&amp;#10;#---------------------&amp;#10;# starting values&amp;#10;state_no = 0&amp;#10;&amp;#10;lmarker = -1 &amp;#10;&amp;#10;delay_size = 2&amp;#10;&amp;#10;#---------------------&amp;#10;# filter preferences&amp;#10;step_limit = 0.09    # 30Hz: 0.19 | 60Hz: 0.09&amp;#10;lower_th = 3" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="#-----------------------------------&amp;#10;# End Routine&amp;#10;#-----------------------------------  &amp;#10;&amp;#10;# computing baseline mean&amp;#10;bsize_liste = filter(None, bsize_liste)&amp;#10;baselinemean = round((sum(bsize_liste)/(len(bsize_liste))),2)&amp;#10;baselinemean = baselinemean&amp;#10;&amp;#10;# computing baseline sd&amp;#10;baselinesd = abs(round(numpy.std(bsize_liste),8))&amp;#10;&amp;#10;# computing percent-change: sd / mean&amp;#10;prozent_change1= round((baselinesd/baselinemean),2)&amp;#10;&amp;#10;# computing aussenringradius - maximum deviation &amp;#10;aussenringradius = (baselinemean+(baselinemean*prozent_change1))*35&amp;#10;&amp;#10;# computing innenringradius - minimum deviation&amp;#10;innenringradius = (baselinemean-(baselinemean*prozent_change1))*35&amp;#10;&amp;#10;#--------------------------------------------------------------------------&amp;#10;# savings:&amp;#10;&amp;#10;thisExp.addData('Baseline_Liste', bsize_liste)&amp;#10;thisExp.addData('Baseline_Mittelwert', baselinemean)&amp;#10;thisExp.addData('Baseline_Standardabweichung', baselinesd)" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="res = iViewXAPI.iV_GetSample(byref(sampleData))&amp;#10;bsize =(sampleData.leftEye.diam/32)&amp;#10;&amp;#10;#--------------------&amp;#10;# state 0: starting&amp;#10;#--------------------&amp;#10;if state_no == 0:&amp;#10; if lmarker &lt; 1:&amp;#10;  lmarker = lmarker + 1&amp;#10;  bsize_liste[lmarker] = bsize&amp;#10;  state_next = 0&amp;#10; &amp;#10; else:  &amp;#10;  if bsize &gt; lower_th and bsize_liste[lmarker] &gt; lower_th and bsize_liste[lmarker-1] &gt; lower_th and (abs(bsize-bsize_liste[lmarker]) &lt;= step_limit) and (abs(bsize_liste[lmarker]-bsize_liste[lmarker-1]) &lt;= step_limit):&amp;#10;   lmarker = lmarker + 1&amp;#10;   bsize_liste[lmarker] = bsize&amp;#10;   state_next = 1&amp;#10;  else:&amp;#10;   bsize_liste[lmarker-1] = bsize_liste[lmarker]&amp;#10;   bsize_liste[lmarker] = bsize&amp;#10;&amp;#10;   state_next = 0&amp;#10;&amp;#10;&amp;#10;#----------------------&amp;#10;# state 1: observation&amp;#10;#----------------------&amp;#10;&amp;#10;if state_no == 1:&amp;#10; &amp;#10; # Filter Activation&amp;#10; #- - - - - - - - - - -&amp;#10; if bsize &lt;= lower_th:&amp;#10;  on = 1&amp;#10;  jump_marker = lmarker + 1 # marks values to be replaced &amp;#10;  &amp;#10;        # Identification of last valid_value before the blink&amp;#10;        #- - - - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;  while on == 1:&amp;#10;   if bsize_liste[lmarker] &gt;= lower_th and bsize_liste[lmarker-1] &gt;= lower_th and bsize_liste[lmarker-2] &gt;= lower_th and abs(bsize_liste[lmarker]-bsize_liste[lmarker-1]) &lt;= step_limit and abs(bsize_liste[lmarker-1]-bsize_liste[lmarker-2]) &lt;= step_limit:&amp;#10;    valid_value = bsize_liste[lmarker]&amp;#10;    lmarker = lmarker + 1&amp;#10;    for i in range(lmarker, jump_marker, 1):&amp;#10;     bsize_liste[i] = valid_value&amp;#10;&amp;#10;    bsize_liste[jump_marker] = valid_value&amp;#10;&amp;#10;    lmarker = jump_marker&amp;#10;    puffer_size = jump_marker + delay_size&amp;#10;&amp;#10;    on = 0&amp;#10;    state_next = 2&amp;#10;&amp;#10;   else:&amp;#10;    lmarker = lmarker-1&amp;#10;    &amp;#10; else:&amp;#10;  lmarker = lmarker + 1&amp;#10;  bsize_liste[lmarker] = bsize&amp;#10;  &amp;#10;  state_next = 1&amp;#10;&amp;#10;#-------------------------------------------------------------&amp;#10;# state 2: identification of next valid_value after the blink&amp;#10;#-------------------------------------------------------------&amp;#10;&amp;#10;if state_no == 2:&amp;#10; # collecting values following the blink&amp;#10; #- - - - - - - - - - - - - - - - - - - - - -&amp;#10; if lmarker &lt; puffer_size:&amp;#10;  lmarker = lmarker + 1&amp;#10;  bsize_liste[lmarker] = bsize&amp;#10;&amp;#10;  state_next = 2&amp;#10;&amp;#10; else:&amp;#10;# identification of next valid_value after the blink&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - - - &amp;#10;  if bsize &gt; lower_th and abs(bsize-bsize_liste[lmarker]) &lt;= step_limit and abs(bsize_liste[lmarker]-bsize_liste[lmarker-1]) &lt;= step_limit:               &amp;#10;   lmarker = lmarker + 1&amp;#10;   bsize_liste[lmarker] = bsize&amp;#10;   &amp;#10;   state_next = 1&amp;#10;&amp;#10;  else:&amp;#10;   lmarker = lmarker + 1&amp;#10;   bsize_liste[lmarker] = bsize&amp;#10;   bsize_liste[lmarker-2] = valid_value&amp;#10;   &amp;#10;   state_next = 2&amp;#10;&amp;#10;state_no = state_next&amp;#10;&amp;#10;#baseline_liste.append(sampleData.leftEye.diam/32)&amp;#10;line1 = visual.Line(win, start=(0, -20), end=(0, 20), lineColor=(-1, -1, -1))&amp;#10;line2 = visual.Line(win, start=(-20, 0), end=(20, 0), lineColor=(-1, -1, -1))&amp;#10;line1.draw()&amp;#10;line2.draw()" valType="extendedCode"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="end_instructions">
+      <CodeComponent name="code_5">
+        <Param name="Begin Experiment" updates="constant" val="vartext2=''" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_5" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="if counter ==9:&amp;#10;    vartext2=u'Vielen Dank f\xfcr die Teilnahme! Das Programm beendet sich in 20 Sekunden von selbst.'" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+      <TextComponent name="text_5">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_5" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="set every frame" val="$vartext2" valType="str"/>
+        <Param name="stopVal" updates="constant" val="20" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="ergebnis">
+      <TextComponent name="text_3">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_3" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="text" updates="set every frame" val="$vartext3" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="40" valType="code"/>
+      </TextComponent>
+      <CodeComponent name="code_6">
+        <Param name="Begin Experiment" updates="constant" val="vartext3 = ''&amp;#10;vartext4 = ''" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_6" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="&amp;#10;else:&amp;#10;    vartext3 = 'press space'&amp;#10;    vartext4 = ''" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+      <TextComponent name="text_4">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_4" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="text" updates="set every frame" val="$vartext4" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, -50]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="40" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_7">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_7" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="instructions">
+      <CodeComponent name="iViewX">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="iViewX" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="res = iViewXAPI.iV_Disconnect()" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+      <TextComponent name="text">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="Start activating when the visual feedback appears!&amp;#10;&amp;#10;(press 'space')" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_2">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_2" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="trophy">
+      <ImageComponent name="image_4">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="constant" val="image_4" valType="code"/>
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="durationEstim" updates="None" val="3" valType="code"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="interpolate" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="images/trophy.png" valType="str"/>
+        <Param name="size" updates="constant" val="[256, 256]" valType="code"/>
+      </ImageComponent>
+      <CodeComponent name="code_8">
+        <Param name="Begin Experiment" updates="constant" val="varwin=0" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_8" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="varwin=0&amp;#10;if counter==7 or counter==8 or counter==9:&amp;#10;    varwin=round((minsize/35),2)&amp;#10;elif counter==3 or counter==4 or counter==5 or counter==6 and maxsize &gt; 0:&amp;#10;    varwin=round((maxsize/35),2)&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+      <TextComponent name="text_9">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_9" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="set every frame" val="$varwin" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, -200]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="save_baseline">
+      <CodeComponent name="code">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="trial">
+      <TextComponent name="text_6">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_6" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="$[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="stopVal" updates="constant" val="300" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="[0, 0]" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
+      </TextComponent>
+      <CodeComponent name="trial_code">
+        <Param name="Begin Experiment" updates="constant" val="from numpy import (log)&amp;#10;maxsize=0&amp;#10;minsize=3000&amp;#10;psizeliste = [0]*19000 # ca. 900 bei 30Hz | ca. 1900 bei 60Hz&amp;#10;psize = 0&amp;#10;&amp;#10;feedbacktext = &quot;&quot;&amp;#10;" valType="extendedCode"/>
+        <Param name="name" updates="None" val="trial_code" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="&amp;#10;psizeliste = [0]*190000 # ca. 900 bei 30Hz | ca. 1900 bei 60Hz&amp;#10;psize = 0&amp;#10;&amp;#10;&amp;#10;#---------------------&amp;#10;# starting values&amp;#10;state_no = 0&amp;#10;&amp;#10;lmarker = -1 &amp;#10;&amp;#10;delay_size = 2&amp;#10;&amp;#10;#---------------------&amp;#10;# filter preferences&amp;#10;step_limit = 0.19    # 30Hz: 0.19 | 60Hz: 0.09&amp;#10;lower_th = 1&amp;#10;&amp;#10;#---------------------&amp;#10;# plot settings&amp;#10;minsize = 3000&amp;#10;maxsize = 0&amp;#10;plot_marker = 0&amp;#10;mean_length = 3&amp;#10;plot_buffer = 5&amp;#10;&amp;#10;abc = 0&amp;#10;&amp;#10;#draw&amp;#10;line1 = visual.Line(win, start=(0, -20), end=(0, 20), lineColor=(-1, -1, -1))&amp;#10;line2 = visual.Line(win, start=(-20, 0), end=(20, 0), lineColor=(-1, -1, -1))&amp;#10;circle2 = visual.Circle(win, edges=96, radius=aussenringradius,lineWidth=1, lineColor=(0 , 0, 0), fillColor=(0 , 0, 0), interpolate=True)&amp;#10;circle3 = visual.Circle(win, edges=96, radius=innenringradius,lineWidth=1, lineColor=(-0.3 , -0.3, -0.3), fillColor=(-0.3 , -0.3, -0.3), interpolate=True)&amp;#10;circle4 = visual.Circle(win, edges=96, radius=baselinemean*35,lineWidth=2, lineColor=(-1 , -1, -1), interpolate=True)&amp;#10;circle5 = visual.Circle(win, edges=96, radius=1000,lineWidth=1, lineColor=(-1 , -1, -1), interpolate=True)&amp;#10;circle6 = visual.Circle(win, edges=96, radius=1000,lineWidth=1, lineColor=(-1 , -1, -1), interpolate=True)&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="psizeliste = filter(None, psizeliste)&amp;#10;&amp;#10;psizemean = round((sum(psizeliste)/(len(psizeliste))),2)&amp;#10;&amp;#10;thisExp.addData('Pupil_Liste', psizeliste)&amp;#10;thisExp.addData('Pupil_Mean', psizemean)&amp;#10;thisExp.addData('feedback', 'visual')&amp;#10;&amp;#10;&amp;#10;feedbacktext = &quot;Your baseline was: &quot; + str(baselinemean)+ &quot;\n&quot; + &quot;Your average pupildilation was: &quot; + str(psizemean)+ &quot;\n&quot; &amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="res = iViewXAPI.iV_Disconnect()" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="&amp;#10;#-----------------------------------&amp;#10;# Each Frame&amp;#10;#-----------------------------------&amp;#10;# eye-tracker data&amp;#10;res = iViewXAPI.iV_GetSample(byref(sampleData))&amp;#10;psize =(sampleData.leftEye.diam) # /32 für highspeed eyetracker, ohne /32 für RED&amp;#10;&amp;#10;&amp;#10;#--------------------&amp;#10;# state 0: starting&amp;#10;#--------------------&amp;#10;if state_no == 0:&amp;#10; if lmarker &lt; 1:&amp;#10;  lmarker = lmarker + 1&amp;#10;  psizeliste[lmarker] = psize&amp;#10;  state_next = 0&amp;#10; &amp;#10; else:&amp;#10;  if psize &gt; lower_th and psizeliste[lmarker] &gt; lower_th and psizeliste[lmarker-1] &gt; lower_th and (abs(psize-psizeliste[lmarker]) &lt;= step_limit) and (abs(psizeliste[lmarker]-psizeliste[lmarker-1]) &lt;= step_limit):&amp;#10;   lmarker = lmarker + 1&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   state_next = 1&amp;#10;  else:&amp;#10;   psizeliste[lmarker-1] = psizeliste[lmarker]&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   state_next = 0&amp;#10;&amp;#10;&amp;#10;#----------------------&amp;#10;# state 1: observation&amp;#10;#----------------------&amp;#10;&amp;#10;if state_no == 1:&amp;#10; plot_marker = 1 &amp;#10; # Filter Activation&amp;#10; #- - - - - - - - - - -&amp;#10; if psize &lt;= lower_th:&amp;#10;  on = 1&amp;#10;  jump_marker = lmarker + 1 # marks values to be replaced &amp;#10;  # Identification of last valid_value before the blink&amp;#10;  #- - - - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;  while on == 1:&amp;#10;   if psizeliste[lmarker] &gt;= lower_th and psizeliste[lmarker-1] &gt;= lower_th and psizeliste[lmarker-2] &gt;= lower_th and abs(psizeliste[lmarker]-psizeliste[lmarker-1]) &lt;= step_limit and abs(psizeliste[lmarker-1]-psizeliste[lmarker-2]) &lt;= step_limit:&amp;#10;    valid_value = psizeliste[lmarker]&amp;#10;    lmarker = lmarker + 1&amp;#10;    # replacing values&amp;#10;    for i in range(lmarker, jump_marker, 1):&amp;#10;     psizeliste[i] = valid_value&amp;#10;    psizeliste[jump_marker] = valid_value&amp;#10;    lmarker = jump_marker&amp;#10;    puffer_size = jump_marker + delay_size&amp;#10;    on = 0&amp;#10;    state_next = 2&amp;#10;   else:&amp;#10;    lmarker = lmarker-1&amp;#10; else:&amp;#10;  lmarker = lmarker + 1&amp;#10;  psizeliste[lmarker] = psize&amp;#10;  state_next = 1&amp;#10;#-------------------------------------------------------------&amp;#10;# state 2: identification of next valid_value after the blink&amp;#10;#-------------------------------------------------------------&amp;#10;if state_no == 2:&amp;#10; plot_marker = 1&amp;#10; # collecting values following the blink&amp;#10; #- - - - - - - - - - - - - - - - - - - - - -&amp;#10; if lmarker &lt; puffer_size:&amp;#10;  lmarker = lmarker + 1&amp;#10;  psizeliste[lmarker] = psize&amp;#10;  state_next = 2&amp;#10;&amp;#10; else:&amp;#10; # identification of next valid_value after the blink&amp;#10; #- - - - - - - - - - - - - - - - - - - - - - - - - - - - &amp;#10;  if psize &gt; lower_th and abs(psize-psizeliste[lmarker]) &lt;= step_limit and abs(psizeliste[lmarker]-psizeliste[lmarker-1]) &lt;= step_limit:               &amp;#10;   lmarker = lmarker + 1&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   state_next = 1&amp;#10;  else:&amp;#10;   lmarker = lmarker + 1&amp;#10;   psizeliste[lmarker] = psize&amp;#10;   psizeliste[lmarker-2] = valid_value&amp;#10;   state_next = 2&amp;#10;&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;# smooth &amp; plot data:&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;if state_no == 0 or state_no == 1 or state_no == 2:&amp;#10; if plot_marker == 1:&amp;#10;        # BASELINE RINGE (schwarz): MW +/-SD&amp;#10;        #- - - - - - - - - - - - - - - - - - - -&amp;#10;        #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -     &amp;#10;        # FEEDBACK RINGE (rot | grau): Pupillengröße u. Extrema&amp;#10;        #- - - - - - - - - - - - - - - - - - - - - - - - - - - - -&amp;#10;  if lmarker &gt;= mean_length + plot_buffer:&amp;#10;   current_mean = 0&amp;#10;   for p in range(1, mean_length+1, 1):&amp;#10;    current_mean = psizeliste[lmarker-p-plot_buffer] + current_mean&amp;#10;   current_mean = (current_mean/mean_length)*35&amp;#10;&amp;#10;  if current_mean &gt; maxsize and current_mean &gt; aussenringradius:&amp;#10;   maxsize = current_mean&amp;#10;   circle5 = visual.Circle(win, edges=96, radius=maxsize,lineWidth=1, lineColor=(0.2 , 0.2, 0.2), interpolate=True)&amp;#10;  elif current_mean &lt; minsize and current_mean &lt; innenringradius and current_mean != 0:&amp;#10;   minsize = current_mean&amp;#10;   circle6 = visual.Circle(win, edges=96, radius=minsize,lineWidth=1, lineColor=(0.2 , 0.2, 0.2), interpolate=True)&amp;#10;&amp;#10;#red circle&amp;#10;circle1 = visual.Circle(win, edges=96, radius=current_mean,lineWidth=4, lineColor=(0,-1,-1), interpolate=True)&amp;#10;&amp;#10;abc = abc+0.03&amp;#10;&amp;#10;circle2.draw()&amp;#10;circle3.draw()&amp;#10;#circle4.draw()&amp;#10;circle1.draw()&amp;#10;line1.draw()&amp;#10;line2.draw()&amp;#10;#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - &amp;#10;&amp;#10;state_no = state_next&amp;#10;" valType="extendedCode"/>
+      </CodeComponent>
+      <KeyboardComponent name="key_resp_9">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_9" valType="code"/>
+        <Param name="stopVal" updates="constant" val="300" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="iViewX_Connect">
+      <CodeComponent name="code_4">
+        <Param name="Begin Experiment" updates="constant" val="from iViewXAPI import  *            #iViewX library&amp;#10;# ---------------------------------------------&amp;#10;#---- connect to iViewX&amp;#10;# ---------------------------------------------&amp;#10;res = iViewXAPI.iV_Connect(c_char_p('141.54.159.23'), c_int(4444), c_char_p('141.54.159.21'), c_int(5555))&amp;#10;&amp;#10;res = iViewXAPI.iV_GetSystemInfo(byref(systemData))&amp;#10;print &quot;iV_GetSystemInfo: &quot; + str(res)&amp;#10;print &quot;Samplerate: &quot; + str(systemData.samplerate)&amp;#10;print &quot;iViewX Verion: &quot; + str(systemData.iV_MajorVersion) + &quot;.&quot; + str(systemData.iV_MinorVersion) + &quot;.&quot; + str(systemData.iV_Buildnumber)&amp;#10;print &quot;iViewX API Verion: &quot; + str(systemData.API_MajorVersion) + &quot;.&quot; + str(systemData.API_MinorVersion) + &quot;.&quot; + str(systemData.API_Buildnumber)&amp;#10;&amp;#10;&amp;#10;'''&amp;#10;# ---------------------------------------------&amp;#10;#---- configure and start calibration&amp;#10;# ---------------------------------------------&amp;#10;#calibrationData = CCalibration(13, 1, 1, 0, 0, 180, 150, 2, 20, b&quot;&quot;)&amp;#10;&amp;#10;calibrationData = CCalibration(9, 1, 1, 0, 2, 250, 180, 2, 20, b&quot;&quot;)&amp;#10;#(method, visualization, display, speed, auto, fg, bg, shape, size, filename)&amp;#10;&amp;#10;res = iViewXAPI.iV_SetupCalibration(byref(calibrationData))&amp;#10;print &quot;iV_SetupCalibration &quot; + str(res)&amp;#10;res = iViewXAPI.iV_Calibrate()&amp;#10;print &quot;iV_Calibrate &quot; + str(res)&amp;#10;res = iViewXAPI.iV_Validate()&amp;#10;print &quot;iV_Validate &quot; + str(res)&amp;#10;&amp;#10;print &quot;iV_GetAccuracy &quot; + str(res)&amp;#10;print &quot;deviationXLeft &quot; + str(accuracyData.deviationLX) + &quot; deviationYLeft &quot; + str(accuracyData.deviationLY)&amp;#10;print &quot;deviationXRight &quot; + str(accuracyData.deviationRX) + &quot; deviationYRight &quot; + str(accuracyData.deviationRY)&amp;#10;'''" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_4" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="valence">
+      <CodeComponent name="code_3">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_3" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+      </CodeComponent>
+      <RatingScaleComponent name="rating1">
+        <Param name="labels" updates="constant" val="" valType="str"/>
+        <Param name="pos" updates="constant" val="0, -0.4" valType="str"/>
+        <Param name="high" updates="constant" val="9" valType="code"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="marker" updates="constant" val="triangle" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="markerStart" updates="constant" val="" valType="str"/>
+        <Param name="disappear" updates="constant" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="1.0" valType="code"/>
+        <Param name="tickHeight" updates="constant" val="" valType="str"/>
+        <Param name="showAccept" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="low" updates="constant" val="1" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="visualAnalogScale" updates="constant" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="scaleDescription" updates="constant" val="" valType="str"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="categoryChoices" updates="constant" val="" valType="str"/>
+        <Param name="customize_everything" updates="constant" val="showAccept=False,escapeKeys=['escape'], size=1.62, &amp;#10;    pos=[0.0, -0.1], low=1, high=9, scale=' ', markerColor= [-0.5, -0.5, -0.5], textColor=[-0.5, -0.5, -0.5], lineColor=[-0.5, -0.5, -0.5]" valType="str"/>
+        <Param name="name" updates="None" val="rating1" valType="code"/>
+        <Param name="singleClick" updates="constant" val="False" valType="bool"/>
+      </RatingScaleComponent>
+      <ImageComponent name="image_2">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="constant" val="image_2" valType="code"/>
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="pos" updates="constant" val="[0, 150]" valType="code"/>
+        <Param name="interpolate" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="valence.png" valType="str"/>
+        <Param name="size" updates="constant" val="[910, 115]" valType="code"/>
+      </ImageComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="iViewX_Connect"/>
+    <Routine name="bl_instructions"/>
+    <Routine name="baseline"/>
+    <Routine name="trial"/>
+    <Routine name="feedback"/>
+    <Routine name="instructions"/>
+    <LoopInitiator loopType="TrialHandler" name="feedbackLoop">
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="name" updates="None" val="feedbackLoop" valType="code"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="10" valType="code"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+    </LoopInitiator>
+    <Routine name="wait"/>
+    <Routine name="baseline"/>
+    <Routine name="training_feedback"/>
+    <Routine name="feedback"/>
+    <LoopTerminator name="feedbackLoop"/>
+    <Routine name="instructions_noFeedback"/>
+    <LoopInitiator loopType="TrialHandler" name="noFeedbackLoop">
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="name" updates="None" val="noFeedbackLoop" valType="code"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="10" valType="code"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+    </LoopInitiator>
+    <Routine name="wait"/>
+    <Routine name="baseline"/>
+    <Routine name="training_noFeedback"/>
+    <Routine name="feedback"/>
+    <LoopTerminator name="noFeedbackLoop"/>
+    <Routine name="end"/>
+  </Flow>
+</PsychoPy2experiment>
