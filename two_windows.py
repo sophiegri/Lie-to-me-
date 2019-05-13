@@ -700,6 +700,16 @@ circle5 = visual.Circle(win, edges=96, radius=1000,lineWidth=1, lineColor=(-1 , 
 circle6 = visual.Circle(win, edges=96, radius=1000,lineWidth=1, lineColor=(-1 , -1, -1), interpolate=True)
 
 # win 2
+
+stimTest = visual.TextStim(win=win2, name='stimTest',
+    text='hello there',
+    font='Arial',
+    units='pix', pos=[0, 0], height=30, wrapWidth=None, ori=0, 
+    color=[-0.5, -0.5, -0.5], colorSpace='rgb', opacity=1,
+    depth=0.0);
+stimTest.setAutoDraw(True)
+
+
 w2_line1 = visual.Line(win2, start=(0, -20), end=(0, 20), lineColor=(-1, -1, -1))
 w2_line2 = visual.Line(win2, start=(-20, 0), end=(20, 0), lineColor=(-1, -1, -1))
 w2_circle2 = visual.Circle(win2, edges=96, radius=aussenringradius,lineWidth=1, lineColor=(0 , 0, 0), fillColor=(0 , 0, 0), interpolate=True)
@@ -710,11 +720,17 @@ w2_circle6 = visual.Circle(win2, edges=96, radius=1000,lineWidth=1, lineColor=(-
 
 w2_circle1 = visual.Circle(win2, edges=96, radius=0,lineWidth=4, lineColor=(0,-1,-1), interpolate=True)
 
-w2_circle2.setAutoDraw(True)
-w2_circle3.setAutoDraw(True)
-w2_circle1.setAutoDraw(True)
-w2_line1.setAutoDraw(True)
-w2_line2.setAutoDraw(True)
+# must set this here, not in while loop
+# w2_circle2.setAutoDraw(True)
+# w2_circle3.setAutoDraw(True)
+# w2_circle1.setAutoDraw(True)
+# w2_line1.setAutoDraw(True)
+# w2_line2.setAutoDraw(True)
+
+lied_once = False
+
+real_current_mean = 0
+
     
 key_resp_9 = event.BuilderKeyResponse()
 # keep track of which components have finished
@@ -838,6 +854,8 @@ while continueRoutine and routineTimer.getTime() > 0:
        current_mean = 0
        for p in range(1, mean_length+1, 1):
         current_mean = psizeliste[lmarker-p-plot_buffer] + current_mean
+        
+       real_current_mean = (current_mean/mean_length)
        current_mean = (current_mean/mean_length)*35
     
       if current_mean > maxsize and current_mean > aussenringradius:
@@ -853,6 +871,8 @@ while continueRoutine and routineTimer.getTime() > 0:
     
     w2_circle1.radius = current_mean
     
+    # .text = ( current_mean >= the_value_to_lie ) ? "yes" : "no";
+    
     abc = abc+0.03
     
     circle2.draw()
@@ -861,12 +881,20 @@ while continueRoutine and routineTimer.getTime() > 0:
     line1.draw()
     line2.draw()
     
-    # window 2
-    # w2_circle2.draw()
-    # w2_circle3.draw()
-    # w2_circle1.draw()
-    # w2_line1.draw()
-    # w2_line2.draw()
+    print( str(real_current_mean) + " - " + str(baselinemean) )
+    
+    if real_current_mean >= baselinemean:
+        stimTest.text = "Yes"
+        lied_once = True
+        
+        
+        # save some data in the csv
+        # key, value
+        # thisExp.addData('question_4', "lied")
+    else:
+        if lied_once == False:
+            stimTest.text = "No"
+
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
     state_no = state_next
@@ -2523,7 +2551,6 @@ routineTimer.reset()
 
 
 
-res = iViewXAPI.iV_Disconnect()
 res = iViewXAPI.iV_Disconnect()
 # these shouldn't be strictly necessary (should auto-save)
 thisExp.saveAsWideText(filename+'.csv')
